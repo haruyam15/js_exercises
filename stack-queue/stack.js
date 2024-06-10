@@ -16,8 +16,7 @@ class Stack {
   // stack에 데이터를 넣을 수 있어야 합니다.
   push(item) {
     if(item){
-      const newItemKey = this.count === 0 ? 0 : this.count;
-      this.storage[newItemKey] = item;
+      this.storage[this.count] = item;
       this.count++
       console.log(`${item}가(이) 추가되었습니다.`)
       console.log(this.storage)
@@ -49,9 +48,6 @@ const stackInstance = new Stack;
 stackInstance.push("A");
 stackInstance.push("B");
 stackInstance.pop();
-stackInstance.pop();
-stackInstance.pop();
-stackInstance.push("A");
 stackInstance.size();
 
 //메소드 호출하면 console 찍힘!
